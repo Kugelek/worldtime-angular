@@ -7,13 +7,13 @@ import { Output, EventEmitter } from '@angular/core';
   styleUrls: ['./buttons.component.css']
 })
 export class ButtonsComponent implements OnInit {
-  @Output() someEvent = new EventEmitter<string>();
+  @Output() updateTimeEvent = new EventEmitter<string>();
   constructor() { }
 
   ngOnInit(): void {
   }
-  changeTimeZone(timeZone) {
-    this.someEvent.next(timeZone);
+  changeTimeZone(timeZone: string): void {
+    this.updateTimeEvent.next(timeZone);
   }
 
 }
