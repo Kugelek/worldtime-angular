@@ -26,12 +26,14 @@
     font-weight: 400;
     border: 1px solid #555;
     margin: 1rem;
+    outline: none;
 }
 @media only screen and (max-width: 36em){
     :host>*{
         width: 8rem;
         height: 8rem;
         font-size: .8rem;
+        
     }
  }
 :host>*:hover{
@@ -39,4 +41,7 @@
    opacity: 1;
    color: #fff;
    transform: scale(1.1);
+}
+:host>*:active{
+    transform: translateY(3px);
 }
