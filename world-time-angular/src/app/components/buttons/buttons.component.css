@@ -1,0 +1,42 @@
+:host{
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+}
+@media only screen and (max-width: 56.25em){
+    :host{flex-wrap:wrap;
+    margin-top: 5rem;
+    justify-content: center;
+    height: 60vh;}
+ }
+ @media only screen and (max-width: 36em){
+    :host{flex-wrap:wrap;
+    margin-top: 3rem;
+    justify-content: center;
+    height: 80vh;}
+ }
+:host>*{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+    opacity: .9;
+    font-weight: 400;
+    border: 1px solid #555;
+    margin: 1rem;
+}
+@media only screen and (max-width: 36em){
+    :host>*{
+        width: 8rem;
+        height: 8rem;
+        font-size: .8rem;
+    }
+ }
+:host>*:hover{
+   background-color: #666;
+   opacity: 1;
+   color: #fff;
+   transform: scale(1.1);
+}

@@ -6,22 +6,22 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TimerComponent } from './components/timer/timer.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
-import { ButtonComponent } from './components/button/button.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     TimerComponent,
     ButtonsComponent,
-    ButtonComponent,
     FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

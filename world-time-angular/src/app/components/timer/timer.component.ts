@@ -44,6 +44,7 @@ export class TimerComponent implements OnInit {
   localUpdateTime() {
     this.interval = setInterval(() => {
       this.seconds = parseInt(this.seconds) + 1;
+
       if (this.seconds == 60) {
         this.seconds = 0;
         this.minutes = parseInt(this.minutes) + 1;

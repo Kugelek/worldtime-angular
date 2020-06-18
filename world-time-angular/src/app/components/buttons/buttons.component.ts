@@ -13,7 +13,6 @@ export class ButtonsComponent implements OnInit {
   ngOnInit(): void {
   }
   changeTimeZone(timeZone) {
-    console.log("XD");
     this.someEvent.next(timeZone);
   }
 

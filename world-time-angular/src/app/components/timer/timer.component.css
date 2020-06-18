@@ -1,0 +1,21 @@
+:host{
+    margin: auto;
+    width: 70vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 7rem;
+    text-align: center;
+}
+
+.timer__heading{
+    font-size: 3rem;
+    font-weight: 200;
+    letter-spacing: 1.6;
+    
+}
+.timer__time{
+    font-size: 3rem;
+    font-weight: 600;
+    
+}
