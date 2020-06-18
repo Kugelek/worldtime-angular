@@ -13,6 +13,7 @@ export class TimerComponent implements OnInit {
   minutes;
   seconds;
   timeZone;
+  interval;
 
   constructor(private timeService: TimeService) {
   }
@@ -25,6 +26,7 @@ export class TimerComponent implements OnInit {
       console.log(this.timeObj);
       [this.hours, this.minutes, this.seconds] = [...this.timeDate.split('T')[1].split(':')];
       this.seconds = this.seconds.slice(0, 5);
+      this.localUpdateTime();
     });
   }
 
@@ -39,5 +41,22 @@ export class TimerComponent implements OnInit {
     });
   }
 
-
+  localUpdateTime() {
+    this.interval = setInterval(() => {
+      this.seconds = parseInt(this.seconds) + 1;
+      if (this.seconds == 60) {
+        this.seconds = 0;
+        this.minutes = parseInt(this.minutes) + 1;
+      }
+      if (this.minutes == 60) {
+        this.minutes = 0;
+        this.hours = parseInt(this.hours) + 1;
+      }
+      if (this.hours == 24) {
+        this.hours = 0;
+      }
+    }, 1000);
+  }
 }
+
+
